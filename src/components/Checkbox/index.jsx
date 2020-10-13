@@ -1,15 +1,18 @@
 import React from 'react';
-import { Input } from './styledCheckbox';
+import { Label, Input } from './styledCheckbox';
 
 const Checkbox = ({
 	type = 'checkbox',
 	name,
 	checked = false,
 	onChange,
-	onClick,
+	label,
 }) => {
 	return (
-		<Input type={type} name={name} checked={checked} onChange={onChange} />
+		<Label key={label}>
+			{label}
+			<Input type={type} name={name} checked={checked} onChange={onChange} />
+		</Label>
 	);
 };
 export default Checkbox;

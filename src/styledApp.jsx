@@ -7,10 +7,9 @@ export const StyledApp = styled.div`
 	background-color: #171c21;
 	color: #fff;
 	min-height: 100vh;
-	padding: 80px 160px;
 	width: 100%;
-
-	body {
-		margin: 0;
+	padding: 40px 0;
+	> div {
+		margin: 0 160px 40px;
 	}
 `;

@@ -136,23 +136,19 @@ function App() {
 		<StyledApp className="App">
 			<div>
 				{tags.map((item) => (
-					<label key={item.name}>
-						{item.name}
-						<Checkbox
-							name={item.name}
-							checked={checkedItems[item.name]}
-							onChange={handleChange}
-						/>
-					</label>
-				))}
-				<label key={'active'}>
-					active
 					<Checkbox
-						name={'active'}
-						checked={checkedItems['active']}
+						label={item.name}
+						name={item.name}
+						checked={checkedItems[item.name]}
 						onChange={handleChange}
 					/>
-				</label>
+				))}
+				<Checkbox
+					label={'active'}
+					name={'active'}
+					checked={checkedItems['active']}
+					onChange={handleChange}
+				/>
 			</div>
 
 			<Tables

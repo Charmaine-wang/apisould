@@ -5,12 +5,13 @@ export const TableWrapper = styled.div`
 	grid-template-columns: ${(props) => `repeat(${props.numberOfColumns}, 1fr)`};
 	background-color: #171c21;
 	color: #c1c7cd;
-
+	margin: 80px 160px;
+	border: 1px solid #c1c7cd;
 	& > div {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border: 1px solid #c1c7cd;
+		border-bottom: 1px solid #c1c7cd;
 		text-align: center;
 		height: 40px;
 
