@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { StyledApp } from './styledApp';
 import Tables from './components/Table';
 import Checkbox from './components/Checkbox';
+
 function App() {
 	const [fetchApi, setFetchApi] = useState({});
 	const [sortKey, setSortKey] = useState('');
@@ -131,7 +133,7 @@ function App() {
 	const filteredData = filterByTags(data, checkedItems);
 
 	return (
-		<div className="App">
+		<StyledApp className="App">
 			<div>
 				{tags.map((item) => (
 					<label key={item.name}>
@@ -160,7 +162,7 @@ function App() {
 				isAscending={isAscending}
 				sortKey={sortKey}
 			/>
-		</div>
+		</StyledApp>
 	);
 }
 
