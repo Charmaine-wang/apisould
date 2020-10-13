@@ -7,8 +7,6 @@ const Checkbox = ({
 	onChange,
 	onClick,
 }) => {
-	// console.log(name, checked);
-
 	return (
 		<input type={type} name={name} checked={checked} onChange={onChange} />
 	);

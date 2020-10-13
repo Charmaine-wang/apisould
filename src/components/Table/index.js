@@ -47,11 +47,7 @@ const Table = ({ columns, data, handleClick, isAscending, sortKey }) => {
 					{column.sortable && <Chevron />}
 				</StyledColumn>
 			))}
-			{/* {data?.map((row) =>
-				Object.values(row).map((cell) => {
-					return <div>{cell}</div>;
-				})
-			)} */}
+
 			{data?.map((row) => {
 				return (
 					<>

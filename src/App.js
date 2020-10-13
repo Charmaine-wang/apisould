@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Tables from './components/Table';
-import { ReactComponent as Check } from './assets/check.svg';
 import Checkbox from './components/Checkbox';
 function App() {
 	const [fetchApi, setFetchApi] = useState({});
@@ -27,10 +26,10 @@ function App() {
 		const postCode = parseInt(splitString[splitString.length - 1]);
 		return postCode;
 	};
-	const getAddress = (str) => {
-		const splitString = str.split(',');
-		return splitString.slice(0, [splitString.length - 1].join(','));
-	};
+	// const getAddress = (str) => {
+	// 	const splitString = str.split(',');
+	// 	return splitString.slice(0, [splitString.length - 1].join(','));
+	// };
 
 	const columns = [
 		{ name: 'firstname', sortable: true },
@@ -116,6 +115,7 @@ function App() {
 
 	useEffect(() => {
 		handleFetch(sortKey);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [sortKey, isAscending]);
 
 	const data =
